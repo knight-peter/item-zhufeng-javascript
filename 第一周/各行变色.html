@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隔行变色</title>
+<style>
+    body,div,ul,li{
+        margin:0;
+        padding:0;
+        font-family:Arial;
+        font-size:12px;
+    }
+    ul,li{
+        list-style:none;
+    }
+    .c-list{
+        margin:10px auto 0;
+        padding:10px;
+        width:500px;
+        border:1px solid #ddd;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+    }
+    .c-list li{
+        height:30px;
+        line-height:30px;
+        cursor:pointer;
+    }
+    .c-list li:hover{
+        background-color: #dddddd;
+    }
+    .c1{
+        background-color: aliceblue;
+    }
+    .c2{
+        background-color: beige;
+    }
+    .c3{
+        background-color: #dddddd;
+    }
+</style>
+</head>
+<body>
+<ul id="list" class="c-list">
+    <li>这里是文字内容啊1</li>
+    <li>这里是文字内容啊2</li>
+    <li>这里是文字内容啊3</li>
+    <li>这里是文字内容啊4</li>
+    <li>这里是文字内容啊5</li>
+    <li>这里是文字内容啊6</li>
+    <li>这里是文字内容啊7</li>
+    <li>这里是文字内容啊8</li>
+    <li>这里是文字内容啊9</li>
+    <li>这里是文字内容啊10</li>
+</ul>
+<script type="text/javascript">
+//原理：操作所有的li,让按照奇偶行的规律，改变他的class样式的属性值，奇数行是c1，偶数行是c2。
+//    通过元素标签名获取一组元素
+//  获取整个文档的li，他是一个集合，我们把这个集合叫做类数组（类似于数组），并且类数组是对象数组类型的。
+    var oList=document.getElementById("list");
+    var oLis=oList.getElementsByTagName("li");
+    console.log(oLis);
+    for(var i=0;i<oLis.length;i++){
+        var oLi=oLis[i];
+//        隔行变色
+        //i%2===0?oLi.className="c1":oLi.className="c2";
+//        隔三行变色
+//        因为每一个li都是对象数据类型的，那么应用这个思想，我们给每一个li增加一个自定义的属性名，属性值就是当前li的className的值
+        switch(i%3){
+            case 0:
+                oLi.className = "c1";
+                oLi.dataClassName = "c1";
+                break;
+            case 1:
+                oLi.className = "c2";
+                oLi.dataClassName = "c2";
+                break;
+            default:
+                oLi.className = "c2";
+                oLi.dataClassName = "c2";
+                break;
+        }
+        console.log(typeof oLi);
+
+//      鼠标移上去
+        oLi.onmouseover=function(){
+            this.className="c3";
+        }
+//      鼠标离开
+        oLi.onmouseout=function(){
+            var oldVal=this.dataClassName;
+            this.className=oldVal;
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组和数组常用的方法</title>
+</head>
+<body>
+<script>
+    //创建一个数组的常用的方法
+//    var ary=[1,2,3,4];//字面量
+//    var ary=new Array();//实例创建方式
+//    console.dir(ary);//看数组的详细信息，包含数组常用的几个方法（展开_proto_,里面提供了数组中的常用的所有方法）
+//    var ary=["珠峰","徐琪",28,true,null,undefined,{},function(){}]
+//    数组是由多个项组成的，每一项之间用都好隔开，并且每一项存储的数据类型可以是任何的数据类型
+//    console.dir(ary);
+//    数据也是对象数据类型的，对象数据类型是由属性名：属性值组成，数组中代表当前是第几项的那个数字（0 1 2 ...）是他的属性名，我们把他叫做数组的索引
+//    ary.length/ary["length"]获取数组的长度
+
+//    学习方法：
+//    1.方法是做什么用的，实现的是什么功能
+//    2.传递的参数是什么
+//    3.返回的值是什么
+//    4.原来的数组是否发生了改变
+
+    /**
+     * 第一组：关于数组的增加、删除、修改
+     * 1.push向数组的末尾增加新增的内容，原来的数组改变了。
+     * 2.unshift想数组开头增加新的内容，返回的也是增加后的数组长度，原来的数组改变了。
+     * 3.splice(n,0,x)想数组的某个位置添加新的内容，从索引n开始，删除0个内容，把新增加的内容x放在索引n的签名，返回的是一个空数组，烟油的数组改变
+     * splice(n,m)删除数组中指定的某些想，从索引n开始（包括n），删除m个元素，把删除的内容当作一个新的数组返回，原有数组改变
+     * splice(n,m,x)把原有数组中的某些项进行替换（先删除，然后用x替换），从索引n开始删除m个元素，用x替换原来的，把删除的内容当作一个新的数组返回，原有数组改变。
+     * 规律：splice(0,0,x)相当与我们的unshift
+     *      splice(ary.length,0,x)相当于我们的push
+ *      4.pop删除数组最后一个，返回的是删除的那一箱，原有数组改变
+     *  5.shift删除数组第一个，返回的是删除的那一项，原有数组改变
+     *  6.slice(n,m)从索引开始（包含n），找到索引m处（不包含m），然后把找到的内容作为一个新的数组返回，原有的数组是不改变的。
+     *  slice(n)从索引n开始（包含n），查找到数组的末尾
+     *  slice(0)或者slice()讲原有的数组原封不懂的复制一分，属于数组的克隆
+     *  7.concat也可以实现数组的克隆，原来的数组不便
+     *  concar的本意是实现数组的拼接的ary.concat(ary2)讲数组ary和ary2拼接成一个数组，原来的数组也不改变。
+     */
+    /**
+     * 第三组：将数组转化为我们的字符串
+     * 8.toString把数组中的每一项难处理用逗号隔开，原有数组不变。
+     * 9.join(分隔符) 把数组中的每一项拿出来用指定的分隔符隔开，原有数组不变。
+     *
+     */
+    /**
+     * 数组的排列和排序
+     * 1.reverse数组倒过来排列，原有的数组改变
+     * 2.sort数组的排序，可以实现由大到小（由小到大），原有的数组也变
+     * 直接写sort只能处理10以内的数字排列，处理10以上的我们需要传递一个参数，这个参数是一个函数。
+     * ary.sort(function(a,b){return a-b;});由小到大排序
+     * ary.sort(function(a,b){return b-a;});由大到小排序
+     */
+//    var ary=[10,12,13,11,19,17];
+//    var res=ary.push(16,10);
+//    console.log(ary);
+//    console.dir(res);
+//    var res=ary.unshift(16,10);
+//    console.log(ary);
+//    var res=ary.splice(2,2,"珠峰");
+//    console.log(ary);
+//    console.log(res);
+//    var res=ary.shift();
+//    console.log(ary);
+//    console.log(res);
+//    var ary2=["zhufeng","12k"];
+//    var res=ary.concat(ary2);
+//    console.log(ary);
+//    console.log(res);
+//    var res=ary.toString();
+//    console.log(ary);
+//    console.log(res);
+//    实现数组中数字的求和
+//    var total=0;
+//    for(var i=0;i<ary.length;i++){
+//        total+=ary[i];
+//    }
+//    数组求和的高级办法
+//    var str=ary.join("+");
+//    var total=eval(str);//eval 将指定的字符串变成真正的表达式执行
+//    console.log(total);
+//    console.log(ary.join("*"));//乘法
+//    var ary=[10,12,23,11,19,17];
+//    ary.sort();
+//    console.log(ary);
+
+    var ary=[10,12,23,6,19,17];
+    ary.sort(function(a,b){
+//        a代表是每一次循环
+        console.log(a+"<===>"+b);
+    });
+    console.log(ary);
+</script>
+</body>
+</html>

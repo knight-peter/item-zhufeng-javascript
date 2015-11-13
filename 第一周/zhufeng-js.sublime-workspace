@@ -1,0 +1,579 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"text",
+				"text-indent"
+			],
+			[
+				"bakc",
+				"background-color"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"if",
+				"if	if"
+			],
+			[
+				"slide",
+				"slideToggle	.slideToggle()"
+			],
+			[
+				"POS",
+				"pos-r	position: relative;"
+			],
+			[
+				"remove",
+				"removeClass	.removeClass()"
+			],
+			[
+				"add",
+				"addClass	.addClass()"
+			],
+			[
+				"fi",
+				"first	.first()"
+			],
+			[
+				"f",
+				"first	.first()"
+			],
+			[
+				"ready",
+				"ready	$(document).ready"
+			],
+			[
+				"over",
+				"overflow-y"
+			],
+			[
+				"attr",
+				"attr	.attr() - single"
+			],
+			[
+				"rg",
+				"rgba(r,g,b,a)"
+			],
+			[
+				"z-",
+				"z-index"
+			],
+			[
+				"bac",
+				"background-image"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"let",
+				"left"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"isp",
+				"Package Control: Install Package"
+			],
+			[
+				"snippet",
+				"Snippet: html"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/learn/item-珠峰-javascript"
+	],
+	"file_history":
+	[
+		"/D/learn/item-珠峰-javascript/作业01.html",
+		"/D/learn/珠峰培训2015年JS基础视频/珠峰培训_免费课/代码/乘法表/乘法表.html",
+		"/D/learn/珠峰培训2015年JS基础视频/珠峰培训_免费课/代码/数组/冒泡排序.html",
+		"/D/learn/珠峰培训2015年JS基础视频/珠峰培训_免费课/代码/数组/去重.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/less/c.less",
+		"/D/Work/item_shangyi--pc/shangyi--pc/less/mixins/m-u.less",
+		"/D/Work/item_shangyi--pc/shangyi--pc/less/u.less",
+		"/D/Work/item_shangyi--pc/shangyi--pc/短信通讯录/SendSMSMessage--慢病.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/客户中心/iframe-干预随访2.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/工作管理/工作管理-任务查询.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/健康管理师/健康服务统计表.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/page-demo/图表数据.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/客户管理/客户咨询-列表.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/个性化需求记录/个性化需求记录-专科专家推荐.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/page-demo/客户咨询表.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/page-demo/c-tab-group.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/page-demo/c-form-group.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/信息管理/信息展示页-c-info-group.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/公众信息发布/公众信息发布-信息管理.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/客户管理/客户管理-干预随访2.html",
+		"/D/Desktop/contact.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/page-demo/c-table-group.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/page-demo/iframe-干预随访.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/短信通讯录/SendSMSMessage.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/index/首页（改）2.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/index/首页（改）.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/表单种类/forms_four.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/表单种类/formGroup-会诊日志.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/表单种类/input-group.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/客户管理/iframe-干预随访2.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/客户管理/客户投诉表.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/表单种类/form-group.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/客户管理/客户管理-干预随访.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/developer/bootstrap/css/bootstrap.css",
+		"/D/Work/item_shangyi--pc/shangyi--pc/客户管理/干预随访.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/健康管理师/健康服务管理.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/page-demo/体检档案--列表--移动端.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/page-demo/个人健康档案--移动端.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/健康宣教/文章内容.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/健康宣教/weibo.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/表单种类/checkbox-table.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/个性化需求记录/个性化需求记录-中医体质评估-问卷.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/客户管理/客户分级管理-预警监测（改）.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/个性化需求记录/个性化需求记录-中医体质评估.html",
+		"/D/Work/item_shangyi--pc/shangyi--pc/注册&登录/login--健康宣教.html",
+		"/D/Desktop/bootstrap-3.3.5-dist/css/bootstrap.css",
+		"/D/Work/item_shangyi--pc/shangyi--pc/css/u.css",
+		"/D/Desktop/简单登录/page-demo/login--简单版本.html",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.06.11/less/u.less",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.06.11/developer/bootstrap/css/bootstrap.css",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.06.11/less/c.less",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.06.11/page-demo/login--简单版本.html",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.06.11/page-demo/体检档案--列表--移动端.html",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.06.11/page-demo/移动端表格.html",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.06.11/less/mixins/m-u.less",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.06.11/page-demo/客户咨询表.html",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.06.04/page-demo/图表数据.html",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.04.13/page-demo/客户资料--OA嵌入页.html",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.04.13/客户资料--嵌入页.html",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.04.13/page-demo/u-help-class--moreData.html",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.04.13/page-demo/iframe-table--个人健康档案.html",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.04.13/css/u.css",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.04.13/js/main.js",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.04.13/css/l.css",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.04.13/less/l.less",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.04.13/less/i-ColorWidth.less",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--导航去掉css3-02.03/less/l.less",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.04.13/less/mixins/m-u.less",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.04.13/less/c.less",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--2015.04.13/page-demo/c-tab-group.html",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--导航去掉css3-02.03/page-demo/c-form-group.html",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--导航去掉css3-02.03/page-demo/login.html",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--导航去掉css3-02.03/less/p-doctor-group.less",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--导航去掉css3-02.03/doctor-group/doctor-group-alert.html",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--导航去掉css3-02.03/doctor-group/doctor-查询病人病史--iframe-wrap.html",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack--导航去掉css3-02.03/page-demo/iframe-table--个人健康档案.html",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack-01.08/page-demo/c-form-group.html",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack-01.08/less/login.less",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack-01.08/js/addDel.js",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack-01.08/doctor-group/doctor-查询病人病史--iframe.html",
+		"/D/Work/项目--尚医后台软件/less-group--greenBlack-01.08/doctor-group/doctor-查询病人病史--iframe-wrap.html",
+		"/D/Work/less-group--greenBlack-01.08/doctor-group/doctor-group-alert.html",
+		"/D/Work/less-group--greenBlack-01.08/less/p-index.less",
+		"/D/Work/less-group--greenBlack-01.08/page-demo/iframe-table-col-2.html",
+		"/D/Work/less-group--greenBlack-01.08/page-demo/iframe-table.html",
+		"/D/Work/less-group--greenBlack-01.08/page-demo/iframe-客户套餐设置.html",
+		"/D/Work/less-group--greenBlack-01.08/js/main.js",
+		"/D/Work/less-group--greenBlack-01.08/less/u.less",
+		"/D/Work/less-group--greenBlack-01.08/less/c.less",
+		"/D/Work/less-group--greenBlack-01.08/less/p-doctor-group.less",
+		"/D/Work/less-group--greenBlack-01.08/doctor-group/bootstrap-switch.html",
+		"/D/Work/less-group--greenBlack-01.08/doctor-group/doctor-查询病人病史.html",
+		"/D/Work/less-group--greenBlack-01.08/js/addDel.js",
+		"/D/Work/less-group--greenBlack-01.08/资源/bootstrap-switch-master/docs/css/main.css",
+		"/D/Work/less-group--greenBlack-01.08/资源/bootstrap-switch-master/docs/css/highlight.css",
+		"/D/Work/less-group--greenBlack-01.08/less/l.less",
+		"/D/Work/less-group--greenBlack-01.08/less/i-ColorWidth.less",
+		"/D/Work/less-group--greenBlack-01.08/doctor-group/doctor-group-index.html",
+		"/D/Work/less-group--greenBlack-01.08/page-demo/c-tab-group.html",
+		"/D/Work/less-group--greenBlack-01.08/信息展示页-c-info-group.html",
+		"/D/Work/less-group--greenBlack-01.08/js/demo_test.txt",
+		"/D/Work/less-group--greenBlack-01.08/page-demo/tabHtml.html",
+		"/D/Work/less-group--greenBlack-01.08/img/app.jpg",
+		"/D/Work/less-group--greenBlack-01.08/img/bg-img-1.jpg",
+		"/D/Work/less-group--greenBlack-01.08/page-demo/c-form-group.html",
+		"/D/Work Software/Sublime Text 3/Data/Packages/User/Emmet.sublime-settings",
+		"/D/Work Software/Sublime Text 3/Data/Packages/emmet-sublime-master/emmet/snippets.json",
+		"/D/Work Software/Sublime Text 3/Data/Packages/emmet-sublime-master/README.md",
+		"/D/Work Software/Sublime Text 3/Data/Packages/emmet-sublime-master/emmet/caniuse.json",
+		"/D/Work Software/Sublime Text 3/Data/Packages/emmet-sublime-master/messages.json",
+		"/D/Work/less-group--greenLight-01.08/less/i-ColorWidth.less",
+		"/D/Work/less-group/developer/bootstrap/css/bootstrap.css",
+		"/D/Work/less-group/page-demo/login.html",
+		"/D/Work/less-group/less/l.less",
+		"/D/Work/less-group/css/l.css",
+		"/D/Work/less-group/less/mixins/m-u.less",
+		"/D/Work/less-group/less/mixins/m-shadow.less",
+		"/D/Work/less-group/less/login-GreenTown01.less",
+		"/D/Work/代码资源/iCheck-1.x/demo/index.html",
+		"/D/Work/代码资源/iCheck-1.x/skins/square/aero.css",
+		"/D/Work/less-group/less/mixins/veryless.less",
+		"/D/Work/less-group/less/mixins/veryless-plugin.less",
+		"/D/Desktop/hmoss框架-整理版本-less-10.24/less/mixins/m-u.less",
+		"/D/Desktop/hmoss框架-整理版本-less-10.24/less/mixins/m-css3.less",
+		"/D/Desktop/hmoss框架-整理版本-less-10.24/less/mixins/m-var.less",
+		"/D/Work/less-group/less/mixins/m-gradients.less",
+		"/D/Work/less-group/css/c.less",
+		"/D/Work/less-group/less/master.css"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 96.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"keywords",
+			"js-phoneNum-group",
+			"indext",
+			"u-text-default",
+			"u-bt",
+			"tabs",
+			"src=\"img/",
+			"客户业务咨询表",
+			"table-responsive",
+			"img",
+			".media",
+			".u-b",
+			".u-bb",
+			".u-b-c",
+			"u-c",
+			"media",
+			"col-lg-12",
+			"avatar",
+			"头像",
+			"clearfix",
+			"list-group",
+			".table",
+			"width:80px;",
+			"outline: none",
+			"outline: none;",
+			"list-group",
+			"row",
+			"u-ht--",
+			"u-ht",
+			"ht",
+			"@l-aside-wh--md",
+			".u-p-trbl",
+			"u-bg--c",
+			"padding",
+			"border",
+			"ibox",
+			"js-l_change",
+			"showIfarme",
+			".c-icon-bg",
+			"@l-aside--wh",
+			"c-mainNav_child",
+			"width:50px;",
+			"fun_attr",
+			"p-iframe-ht--all",
+			"fun_attr",
+			"groupAdd",
+			"js-groupBtn--delAll",
+			"u-0-",
+			"u-bt--",
+			"u-bt--0",
+			"over",
+			"c-table",
+			"table",
+			"form-inline",
+			"u-b",
+			"u-br",
+			"c-form-inline",
+			"textarea",
+			"u-wh",
+			".c-box_header",
+			"data-id",
+			".p-btn--close",
+			"c-box_header_toolbar_item",
+			"checkbox-inline",
+			"l-aside",
+			"l-content_maincontent",
+			"l-aside_container",
+			"over",
+			"l-body_wrapper",
+			"l-aside_container",
+			"u-b",
+			"c-box_header--tabs",
+			"u-l",
+			"line-height",
+			"l-footer",
+			"u-p--10",
+			".u-bg--c",
+			"u-pos",
+			"u-r--0",
+			"activeId",
+			"breadcrumb",
+			".breadcrumb",
+			"F7F7F7",
+			"c-box_header",
+			"tabs",
+			"dropdown-menu",
+			"btn",
+			"button",
+			"btn",
+			"btn:b",
+			"btn",
+			"footer",
+			"c-mainNav_child",
+			".c-btn-icon",
+			"@c-mainNav-icon--caret--o",
+			"c-mainNav-icon--caret-right",
+			"@c-mainNav_li_a--o",
+			"@l-mainNav--bg-color",
+			"@c-mainNav_child_a--hover--c",
+			"@l-mainNav--bg-color",
+			"@c-mainNav_li_a-active--bg-c",
+			"558923",
+			"@c-mainNav_child_li_a--c",
+			".l-content-control",
+			"@l-content--bg-color",
+			"l-content-control",
+			".l-content-control",
+			"l-content-control",
+			"#82b651",
+			".c-icon-bg",
+			"@c-mainNav_child--bg-c",
+			".c-mainNav_child",
+			"373737",
+			"c-mainNav_li--hover--bg-c",
+			"c-mainNav_li_a-active--bg-c",
+			"btn-primary",
+			"sha",
+			"u-sha",
+			"c-box-login_footer",
+			"p-verification-img",
+			".u-b-t-rad",
+			"c-screen-bg-img",
+			"c-screen-login",
+			".c-box-login_header ",
+			"c-box-login_content",
+			"c-logo--login",
+			"c-box-login-wrap",
+			"c-screen"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"src=\"../img/",
+			"客户干预随访",
+			"col-sm-12",
+			"width:70px;",
+			"width:65px;",
+			"width:80px;",
+			"btn-success"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 130.0
+	},
+	"pinned_build_system": "",
+	"project": "zhufeng-js.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"l.css",
+				"css\\l.css"
+			],
+			[
+				"css",
+				"css\\l.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 251.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

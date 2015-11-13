@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>综合案例-选项卡面板</title>
+<style>
+.tabs-wrap{
+    margin:0;
+    padding: 10px;
+    background-color: #fff;
+    border:1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.nav{
+    padding-left:0;
+    margin-bottom:0;
+    list-style: none;
+}
+    .nav-tabs{
+        border-bottom: 1px solid #dddddd;
+        margin:0;
+    }
+    .nav-tabs:before,
+    .nav-tabs:after {
+         content: " ";
+     display: table;
+     }
+    .nav-tabs:after {
+         clear: both;
+     }
+    .nav>li{
+        position: relative;
+        dispaly:block;
+    }
+    .nav>li>a{
+        position: relative;
+        display:block;
+        padding:10px 15px;
+        color:#337ab7;
+    }
+    .nav-tabs>li{
+        float: left;
+        margin-bottom:-1px;
+    }
+    .nav-tabs>li>a{
+        margin-right:2px;
+        line-height:1.5;
+        border:1px solid transparent;
+        border-radius:4px 4px 0 0;
+    }
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover{
+    color:#555;
+    cursor:default;
+    background-color:#fff;
+    border:1px solid #ddd;
+    broder-bottom-color:transparent;
+}
+.tab-pane{
+    padding:10px;
+}
+    .tab-content>.tab-pane{
+        display:none;
+    }
+.tab-content>.active{
+    display:block;
+}
+</style>
+</head>
+<body>
+    <!--div>(ul.nav.nav-tabs>li*3>a[href="#tab$" data-toggle="tab"]{tab$})+.tab-content>.tab-pane#tab${这里是tab$的内容}*3-->
+    <div class="tabs-wrap">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab1" data-toggle="tab">tab1</a></li>
+            <li><a href="#tab2" data-toggle="tab">tab2</a></li>
+            <li><a href="#tab3" data-toggle="tab">tab3</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab1">这里是tab1的内容</div>
+            <div class="tab-pane" id="tab2">这里是tab2的内容</div>
+            <div class="tab-pane" id="tab3">这里是tab3的内容</div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var oTab=document.getElementsByClassName("nav-tabs");
+        var oLis=oTab.getElementsByTagName("li");
+        var oDivs=oTab.getElementsByTagName()
+    </script>
+</body>
+</html>

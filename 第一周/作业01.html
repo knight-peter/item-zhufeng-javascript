@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一部分：默写单词</title>
+</head>
+<body>
+    <ul>
+        <li>object</li>
+        <li>boolean</li>
+        <li>string</li>
+        <li>number</li>
+        <li>function</li>
+        <li>undefined</li>
+    </ul>
+    <ul>
+        <li>==</li>
+        <li><</li>
+        <li>></li>
+        <li><=</li>
+        <li>>=</li>
+        <li>！</li>
+    </ul>
+    <p>bom</p>
+    <p>dom</p>
+    <script type="text/javascript">
+        var obj={name:"徐琪",height:170};
+//        var obj=new Object();
+        obj['name']="徐琪";
+//        console.log(obj['name']);
+//        console.log(obj.height);
+        //获取属性名和属性值，如果属性名不存在，默认返回的结果是undefined
+//        console.log(obj.zz);
+//        obj.name=null;//假删除
+        delete obj.age;//真删除
+        console.log(obj);
+    </script>
+</body>
+</html>
