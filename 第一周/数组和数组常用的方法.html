@@ -53,6 +53,12 @@
      * ary.sort(function(a,b){return a-b;});由小到大排序
      * ary.sort(function(a,b){return b-a;});由大到小排序
      */
+    /*
+    *一些常用但是不兼容
+    * indexOf
+    * forEach
+    * map
+     */
 //    var ary=[10,12,13,11,19,17];
 //    var res=ary.push(16,10);
 //    console.log(ary);
@@ -88,6 +94,10 @@
 
     var ary=[10,12,23,6,19,17];
     ary.sort(function(a,b){
+//        有六项循环五次
+//        a代表是每一次循环的时候当前的这个项，b是后面的这个项
+//        return a-b;当前项减去后一项，如果大于0，代表签名的比后面的大，这就交换位置
+//        冒泡排序：sort实现排序就是遵循的冒泡排序的思想实现的。
 //        a代表是每一次循环
         console.log(a+"<===>"+b);
     });
