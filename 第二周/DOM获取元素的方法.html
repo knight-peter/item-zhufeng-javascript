@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM获取元素的方法（8种）</title>
+</head>
+<body>
+<input type="text" name="text"/>
+<div id="tab">
+    <ul>
+        <li class="c-li">li内容1</li>
+        <li class="c-li">li内容2</li>
+        <li class="c-li">li内容3</li>
+    </ul>
+</div>
+<input type="radio" name="sex" value="man" id="" checked="true"/>男
+<br/>
+<input type="radio" name="sex" value="woman" id=""/>女
+<br/>
+<input type="button" id="btn" value="触发点击事件"/>
+<script type="text/javascript">
+    //DOM:document object model 文档对象模型
+//
+    /**
+     * 1.获取元素的方法
+     * 1)document.getElementById("元素的ID")
+     * 在整个文档中，通过元素的ID获取到这个元素对象（获取的是一个元素）
+     * 如果没有获取到，返回的结果是null
+     * 注意：如果页面中id重复了，那么这个方法默认只能获取第一个元素
+     * 在ie6、7中，会把表单元素（input）的name属性值当作ID来使用
+     * 在ie6、7中，不区分ID的大小写
+     * 项目实战注意：不要让表单元素的name和其他元素的id重复，不要用id的大小写来区分我们的不同元素
+     * 我们可以直接的用元素的id来代表当前这个元素类型（不推荐）
+     */
+//    var oDiv=document.getElementById("tab");
+//    console.log(oDiv.tagName);
+//    tab.style.border="1px solid red";
+    /**
+     * 2)通过元素标签名，来获取一组元素（有几个获取几个）
+     * document.getElementsByTagName("元素标签名");
+     * 获取的是一个对象数据类型结果，并且是一个类数组（以数字作为索引，索引从0开始，逐级递增，索引代表的是当前对应的某一个元素，有一个叫做length的属性代表获取的个数）
+     * document称之为上下文（content）,就是我们自己可以限定当前获取元素的范围。[getElementById的上下文只能是document]
+     */
+//    var oDiv=document.getElementById("tab");
+//    var oLis=oDiv.getElementsByTagName("li");
+//    console.dir(oLis);
+//    oLis[0]等同于oLis.item(0)
+    /**
+     * 3)context.getElementsByName() 通过name属性的值获取一组元素
+     * 在ie浏览器下只对表单元素起作用
+     * 这个方法只应用于获取具有同样name的表单元素
+     */
+//    var oBtn=document.getElementById("btn");
+//    oBtn.onclick=function(){
+//        var oSex=document.getElementsByName("sex");
+//        var cur="";
+//        for(var i=0;i<oSex.length;i++){
+//            if(oSex[i].checked===true){
+//                cur=oSex[i].value;
+//                break;//单选只能有一个选中，当前园中，那后面肯定就是没有选中
+//            }
+//        }
+//        console.log(cur);
+//    }
+    /**
+     * 4)context.getElementsByClassName() 通过元素的类名来获取一组元素
+     * 是项目中最常用的一种方法，但是，这个方法不兼容 在ie6-8中会报错
+     */
+//    var oDiv=document.getElementById("tab");
+//    var oList=oDiv.getElementsByClassName("c-li");
+//    console.dir(oList);
+    /**
+     * 5)document.documentElement 获取html元素
+     * document.body//获取body元素
+     */
+    var curWidth=document.documentElement.clientWidth||document.body.clientWidth;//兼容所有浏览器的获取当前屏幕的宽度
+    var curHeight=document.documentElement.clientHeight||document.body.clientHeight;//兼容所有浏览器的获取当前屏幕的高度
+    /**
+     * 6)在移动端我们获取元素常用的方法（ie6~8下不兼容）
+     * document.querySelector() 获取一个
+     * document.querySelector() 获取多个 类数组集合
+     * querySelector jquery 参考css选择器
+     */
+//    var oDiv=document.querySelector("#tab");
+//    "#id" ".class" "li"
+//    var oLis=document.querySelectorAll("#tab li");
+
+</script>
+</body>
+</html>
