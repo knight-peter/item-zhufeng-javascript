@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM中的节点和关系属性</title>
+</head>
+<body>
+    <div id="div1">
+        <h1>这里是标题</h1>
+        <!-- 这里是注释 -->
+        <ul>
+            <li>li文字内容1</li>
+            <li>li文字内容2</li>
+            <li id="li3">li文字内容3</li>
+            <li>li文字内容4</li>
+            <li>li文字内容5</li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        //如果我想获li3的上一个哥哥元素节点，我们发现，直接previousSibing获取的不一定是元素的，往上找多少级也不知道
+        var oLi3 = document.getElementById("li3");
+        var pre=oLi3.previousSibling;
+//        第一种办法不够好，继续改进
+//        if(pre.nodeType!==1){
+//            pre=pre.previousSibling;
+//            if(pre.nodeType!==1){
+//                pre=pre.previousSibling;
+//            }
+//        }
+//        第二种办法
+//        while(pre&&pre.nodeType !==1){
+//            pre=pre.previousSibling;
+//        }
+//        封装成方法,获取上一个哥哥元素节点
+        function prev(ele){
+            var pre=ele.previousSibling;
+            while(pre&&pre.nodeType !==1){
+                pre=pre.previousSibling;
+            }
+        }
+//        获取所有哥哥元素节点
+        function prevAll(ele){
+            var pre=ele.previousSibling,ary=[];
+            while(pre){
+                if(pre.nodeType==1){
+                    ary.unshift(pre);
+                }
+                pre=pre.previousSibling;
+            }
+            return ary;
+        }
+        console.log(oLi3.previousSibling.previousSibling);
+
+//        for(var i=0;i<5;i++){
+//            if(i<=5){
+//                i+=1;
+//                continue;
+//            }else{
+//                break;
+//                i+=2;
+//            }
+//        }
+//      for循环改成while循环
+//        var i=0;
+//        while(i<5){
+//            if(i<=5){
+//                i+=1;
+//                i++;
+//                continue;
+//            }else{
+//                break;
+//                i+=2;
+//            }
+//        }
+    </script>
+</body>
+</html>
