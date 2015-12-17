@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM增删改和应用</title>
+</head>
+<body>
+<script type="text/javascript">
+    //动态创建一个元素标签
+//    动态创建一个div元素对象 document.createElement:创建一个元素标签
+//    appendChild:把这个元素添加到指定容器的末尾位置  指定容器.appendChild(元素)
+//    insertBefore:把新的元素newEle添加到老的元素oldEle之前
+//    oldEle.parentNode.insertBefore(newEle,oldEle);
+    var oDiv=document.createElement("div");
+    oDiv.id="div1";
+    oDiv.style.width="200px";
+    oDiv.style.height="100px";
+    oDiv.style.border="2px solid red";
+//    我还要把这个对象添加到我们的页面中
+    document.body.appendChild(oDiv);
+
+    var oP=document.createElement("p");
+    oP.id="p1";
+    oP.style.width="200px";
+    oP.style.height="100px";
+    oP.style.border="2px solid green";
+//    document.body.appendChild(oP);
+    document.body.insertBefore(oP,oDiv);//oDiv.parentNode.insertBefore(oP,oDiv);
+//    oDiv.parentNode.removeChild(oDiv);//删除元素 true:把元素里面的子子孙孙都克隆，默认是false，只克隆眼前的
+    var clo=oP.cloneNode();//克隆元素
+    clo.style.backgroundColor="yellow";
+    document.body.appendChild(clo);
+    var dd=document.createElement("div");
+    dd.style.width="200px";
+    dd.style.height="100px";
+    dd.style.border="5px solid blue";
+    oP.parentNode.replaceChild(dd,oP);//替换
+
+
+//    增加自定义属性
+//    1.把clo看做一个对象数据类型，我们在他的开辟的空间中增加一个属性名"zhuFeng"
+//    var obj={}; obj.name="123";
+//    clo.zhuFeng="珠峰培训";
+//    clo["zhuFeng"]="珠峰培训";
+//    console.log(clo.zhuFeng);
+
+//    setAttribute:设置元素的属性（包含自定义属性）
+//    修改html元素的结果（使用这个方法在html上可以体现出来）
+//    clo.setAttribute("zhuFeng","珠峰培训");
+//    console.log(clo.getAttribute("zhuFeng"));
+//    clo.removeAttribute("zhuFeng");
+//    在ie6~8下这个方法不能修改class属性 clo.setAttribute("class","ccc")是不起作用的
+    clo.className="ccc";//这样可以
+
+
+</script>
+</body>
+</html>

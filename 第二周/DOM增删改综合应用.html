@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM增删改综合应用</title>
+    <style>
+        body,div,input{
+            margin:0;
+            padding:0;
+            font-family: "\5b8b\4f53","Arial Narrow";
+            font-size: 14px;
+        }
+        html,body{
+            width:100%;
+            height:100%;
+            overflow:hidden;
+        }
+        input{
+            display: block;
+            margin:10px auto;
+            width:100px;
+            height:30px;
+            line-height: 30px;
+        }
+        #bg{
+            width:100%;
+            height:100%;
+            background:#000;
+            opacity: 0.2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        #layer{
+            width:300px;
+            height:300px;
+            border:1px solid #ffff00;
+            background:#fff;
+            position: absolute;
+            top:0;
+            left:0;
+            z-index: 2;
+            -webkit-border-radius: 50px 150px;
+            -moz-border-radius: 50px 150px;
+            border-radius: 50px 150px;
+            background:-webkit-radial-gradient(#ffff00,green);
+            -webkit-box-shadow:  inset 0 0 20px #fff;
+            -moz-box-shadow:  inset 0 0 20px #fff;
+            box-shadow:  inset 0 0 20px #fff;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="登录" id="input"></input>
+    <!--<div id="bg"></div>-->
+    <!--<div id="layer"></div>-->
+    <script type="text/javascript">
+//      获取屏幕宽高
+        var cw=document.documentElement.clientWidth||document.body.documentElement.clientWidth;
+        var ch=document.documentElement.clientHeight||document.body.documentElement.clientHeight;
+
+
+
+        var oIn=document.getElementById("input");
+        oIn.onclick=function(){
+//            动态创建弹出层
+            var layer=document.getElementById("layer");
+            var bg=document.createElement("div");
+            bg.id="bg";
+            document.body.appendChild(bg);
+
+            var layer=document.createElement("div");
+            layer.id="layer";
+            layer.style.top=(ch-300)/2+"px";
+            layer.style.left=(cw-300)/2+"px";
+            document.body.appendChild(layer);
+            layer.onclick=function(){
+                document.body.removeChild(bg);
+                document.body.removeChild(layer);
+            }
+        }
+
+    </script>
+</body>
+</html>
