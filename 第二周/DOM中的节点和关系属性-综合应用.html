@@ -37,6 +37,7 @@
             while(pre&&pre.nodeType !==1){
                 pre=pre.previousSibling;
             }
+            return pre;
         }
 //        获取所有哥哥元素节点
         function prevAll(ele){
@@ -49,7 +50,62 @@
             }
             return ary;
         }
-        console.log(oLi3.previousSibling.previousSibling);
+//        获取下一个弟弟节点
+        function next(ele){
+            var $next=ele.nextSibling;
+            while($next&&$next.nodeType !==1){
+                $next=$next.nextSibling;
+            }
+            return $next;
+        }
+//        获取所有弟弟元素节点
+        function nextAll(ele){
+            var $next=ele.nextSibling,ary=[];
+            while($next){
+                if($next.nodeType==1){
+                    ary.push($next);
+                }
+                $next=$next.nextSibling;
+            }
+            return ary;
+        }
+//        获取相邻的两个元素节点
+        function sibling(ele){
+            var pre=ele.previousSibling,
+                $next=ele.nextSibling,
+                ary=[];
+            while(pre&&pre.nodeType!==1){
+                pre=pre.previousSibling;
+            }
+            while($next&&$next.nodeType!==1){
+                $next=$next.nextSibling;
+            }
+            ary.unshift(pre);
+            ary.push($next);
+            return ary;
+        }
+//        获取所有的兄弟元素节点
+        function siblings(ele){
+            var pre=ele.previousSibling,
+                $next=ele.nextSibling,
+                ary_prevAll=[],
+                ary_nextAll=[];
+            while(pre){
+                if(pre.nodeType==1){
+                    ary_prevAll.unshift(pre);
+                }
+                pre=pre.previousSibling;
+            }
+            while($next){
+                if($next.nodeType==1){
+                    ary_nextAll.push($next);
+                }
+                $next=$next.nextSibling;
+            }
+            var res=ary_prevAll.concat(ary_nextAll);
+            return res;
+        }
+        console.log(siblings(oLi3));
 
 //        for(var i=0;i<5;i++){
 //            if(i<=5){

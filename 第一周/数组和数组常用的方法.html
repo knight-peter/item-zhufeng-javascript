@@ -7,7 +7,7 @@
 <body>
 <script>
     //创建一个数组的常用的方法
-//    var ary=[1,2,3,4];//字面量
+    var ary=[1,2,3,4];//字面量
 //    var ary=new Array();//实例创建方式
 //    console.dir(ary);//看数组的详细信息，包含数组常用的几个方法（展开_proto_,里面提供了数组中的常用的所有方法）
 //    var ary=["珠峰","徐琪",28,true,null,undefined,{},function(){}]
@@ -26,7 +26,7 @@
      * 第一组：关于数组的增加、删除、修改
      * 1.push向数组的末尾增加新增的内容，原来的数组改变了。
      * 2.unshift想数组开头增加新的内容，返回的也是增加后的数组长度，原来的数组改变了。
-     * 3.splice(n,0,x)想数组的某个位置添加新的内容，从索引n开始，删除0个内容，把新增加的内容x放在索引n的签名，返回的是一个空数组，烟油的数组改变
+     * 3.splice(n,0,x)想数组的某个位置添加新的内容，从索引n开始，删除0个内容，把新增加的内容x放在索引n的签名，返回的是一个空数组，原有数组改变
      * splice(n,m)删除数组中指定的某些想，从索引n开始（包括n），删除m个元素，把删除的内容当作一个新的数组返回，原有数组改变
      * splice(n,m,x)把原有数组中的某些项进行替换（先删除，然后用x替换），从索引n开始删除m个元素，用x替换原来的，把删除的内容当作一个新的数组返回，原有数组改变。
      * 规律：splice(0,0,x)相当与我们的unshift
@@ -37,7 +37,7 @@
      *  slice(n)从索引n开始（包含n），查找到数组的末尾
      *  slice(0)或者slice()讲原有的数组原封不懂的复制一分，属于数组的克隆
      *  7.concat也可以实现数组的克隆，原来的数组不便
-     *  concar的本意是实现数组的拼接的ary.concat(ary2)讲数组ary和ary2拼接成一个数组，原来的数组也不改变。
+     *  concat的本意是实现数组的拼接的ary.concat(ary2)讲数组ary和ary2拼接成一个数组，原来的数组也不改变。
      */
     /**
      * 第三组：将数组转化为我们的字符串
@@ -71,10 +71,10 @@
 //    var res=ary.shift();
 //    console.log(ary);
 //    console.log(res);
-//    var ary2=["zhufeng","12k"];
-//    var res=ary.concat(ary2);
-//    console.log(ary);
-//    console.log(res);
+    var ary2=["zhufeng","12k"];
+    var res=ary.concat(ary2);
+    console.log(ary);
+    console.log(res);
 //    var res=ary.toString();
 //    console.log(ary);
 //    console.log(res);
@@ -92,16 +92,16 @@
 //    ary.sort();
 //    console.log(ary);
 
-    var ary=[10,12,23,6,19,17];
-    ary.sort(function(a,b){
-//        有六项循环五次
-//        a代表是每一次循环的时候当前的这个项，b是后面的这个项
-//        return a-b;当前项减去后一项，如果大于0，代表签名的比后面的大，这就交换位置
-//        冒泡排序：sort实现排序就是遵循的冒泡排序的思想实现的。
-//        a代表是每一次循环
-        console.log(a+"<===>"+b);
-    });
-    console.log(ary);
+//    var ary=[10,12,23,6,19,17];
+//    ary.sort(function(a,b){
+////        有六项循环五次
+////        a代表是每一次循环的时候当前的这个项，b是后面的这个项
+////        return a-b;当前项减去后一项，如果大于0，代表签名的比后面的大，这就交换位置
+////        冒泡排序：sort实现排序就是遵循的冒泡排序的思想实现的。
+////        a代表是每一次循环
+//        console.log(a+"<===>"+b);
+//    });
+//    console.log(ary);
 </script>
 </body>
 </html>
