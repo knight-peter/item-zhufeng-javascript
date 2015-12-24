@@ -8,6 +8,80 @@
 <script type="text/javascript">
     //Math 是数学函数，里面提供了几个操作数字的方法
 //    1.Math.abs() 取绝对值
+//    2.Math.ceil() 向上取整
+//    3.Math.floor() 向下取整
+//    4.Math.round() 四舍五入
+//    5.Math.max(val,val,val......) 求一堆数里面的最大值
+//    6.Math.min(val,val,val......) 求一堆数里面的最小值
+//    7.Math.random() 获取[0-1)获取0到1之间随机数
+//    获取[n-m]之间的随机整数
+//    Math.round(Math.random()*(m-n)+n)
+//    例如：1-10 14-58
+//    Math.round(Math.random()*9+1)
+//    求随机数58
+//    var n=0;
+//    while(n!==58){
+//        n=Math.round(Math.random()*44+14);
+//        console.log(n);
+//    }
+    function getRandom(n,m){
+//        不管传递的啥，强制转换下，只有两种情况：数字和NaN
+        n=Number(n);
+        m=Number(m);
+        //只要两个中有一个不是有效的数字就返回[0-1)之间随机小数
+        if(isNaN(n)||isNaN(m)){
+            return Math.random();
+        }
+//        如果n比m大了，我们默认交换位置
+        if(n>m){
+            var temp =n;
+            n=m;
+            m=temp;
+        }
+        return Math.round(Math.random()*(m-n)+n);
+    }
+    //获取4个0-61之间的随机整数
+//    var ary=[];
+//    for(var i=0;i<4;i++){
+//        ary.push(getRandom(0,61));
+//    }
+//    console.log(ary);
+
+//    js在指定数组中随机取出N个不重复的数据
+    //从一个给定的数组arr中，随机返回num个不重复项
+    function getArrayItems(arr,num){
+        //新建一个数组，将传入的数组复制过来，用于运算，而不要直接操作传入的数组；
+        var temp_array = new Array();
+        for(var index in arr){
+            temp_array.push(arr[index]);
+        }
+        //取出的数值项，保存在此数组
+        var return_array = new Array();
+        for(var i=0;i<num;i++){
+            //判断如果数组还有可以取出的元素，以防下标越界
+            if(temp_array.length>0){
+                //在数组中产生一个随机索引(因为下标是从0到length-1)
+                var arrIndex = Math.floor(Math.random()*temp_array.length);
+                //将次随机索引的对应数组元素复制出来
+                return_array[i]=temp_array[arrIndex];
+                //然后删掉此索引的数组元素，这时候temp_array变成新的数组
+                temp_array.splice(arrIndex,1);
+            }else{
+                //数组中数据取完后，退出循环，比如数组本来只有10项，但要取出20项
+                break;
+            }
+        }
+        return return_array;
+    }
+    //
+    var my_array = new Array();
+    //max,min指定范围
+    for(var i=min;i<max;i++){
+        my_array[i]=i;
+    }
+    my_array = getArrayItems(my_array,4);
+
+    
 
 
 </script>
