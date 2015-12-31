@@ -40,6 +40,22 @@
         }
         return Math.round(Math.random()*(m-n)+n);
     }
+//    function getRandom(n,m){
+////        不管传递的啥，强制转换下，只有两种情况：数字和NaN
+//        n=Number(n);
+//        m=Number(m);
+//        //只要两个中有一个不是有效的数字就返回[0-1)之间随机小数
+//        if(isNaN(n)||isNaN(m)){
+//            return Math.random();
+//        }
+////        如果n比m大了，我们默认交换位置
+//        if(n>m){
+//            var temp =n;
+//            n=m;
+//            m=temp;
+//        }
+//        return Math.round(Math.random()*(m-n)+n);
+//    }
     //获取4个0-61之间的随机整数
 //    var ary=[];
 //    for(var i=0;i<4;i++){
@@ -78,12 +94,18 @@
     //max,min指定范围
     for(var i=min;i<max;i++){
         my_array[i]=i;
+    //获取4个0-61之间的不重复随机整数
+    var arr_notRepeat=[];
+    for(i=0;i<61;i++){
+        arr_notRepeat[i]=i;
     }
     my_array = getArrayItems(my_array,4);
 
     
 
 
+    my_array=getArrayItems(arr_notRepeat,4);
+    console.log(my_array);
 </script>
 </body>
 </html>
