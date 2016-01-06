@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串方法及应用</title>
+</head>
+<body>
+<script type="text/javascript">
+    var time="2015-5-24 12:55:3";
+//    2015年05月24日 12时55分03秒
+//    思路1：
+//    按照空格，把字符串拆成["2015-5-24","12:55:3"]
+//    拿出数组第一项 再按照-拆成["2015","5","24"]
+//    拿出数组第第二项 再按照-拆成["12","55","3"]
+    //小于10我们补充0
+    function zero(value){
+        return value<10 ? "0"+value:value;
+    }
+    //格式化时间字符串
+    function formatTime(timeStr){
+        var ary=timeStr.split(" ");
+//        console.log(ary);
+        var str1=ary[0];
+        var str2=ary[1];
+        var ary1=str1.split("-");
+        var ary2=str2.split(":");
+        return ary1[0]+"年"+zero(ary1[1])+"月"+zero(ary1[2])+"日"+zero(ary2[0])+"时"+zero(ary2[1])+"分"+zero(ary2[2])+"秒";
+    }
+    var res=formatTime(time);
+    console.log(time);
+    console.log(res);
+
+//    思路2：直接用replace一个个的替换（没办法补充0）
+//    思路3：用正则
+
+</script>
+</body>
+</html>

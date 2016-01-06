@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>在字符串中查找子字符串</title>
+</head>
+<body>
+<script type="text/javascript">
+//    stringObject.indexOf(searchvalue,fromindex)
+//    indexOf接受两个参数：子字符串以及一个可选的第二个参数，后者是开始搜索的位置的一个索引值（比如搜索第二个子字符串）
+    //使用String对象内建的indexOf方法来查找子字符串的位置
+    var testValue = "this is the Cookbook's test string";
+    var subsValue = "Cookbook";
+    var iValue = testValue.indexOf(subsValue);//返回值为12，子字符串的索引
+//    如果要检索的字符串值没有出现，则该方法返回 -1。
+    console.log("子字符串的索引："+iValue);
+    if (iValue!=-1){
+        console.log("true,有子字符串存在。")
+    }
+
+
+
+//    lastIndexOf也接受一个可选的第二个参数，他是开始搜索的位置的一个索引值，只不过是从右边开始计数的位置
+    var tstString = "This apple is my apple.";
+    var iValue_last = tstString.lastIndexOf("apple");//返回17，子字符串最后一次出现的索引
+    console.log("'This apple is my apple.'子字符串'apple'最后一次出现的索引值："+iValue_last);
+
+
+    var sentence = "";
+</script>
+</body>
+</html>
