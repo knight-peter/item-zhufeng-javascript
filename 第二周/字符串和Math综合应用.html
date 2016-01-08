@@ -70,58 +70,47 @@
 
 //    思考：获取四位不重复验证码
     function getArrayItems(arr,num){
+        //新建一个数组，将传入的数组复制过来，用于运算，而不要直接操作传入的数组；
         var temp_array = new Array();
         for(var index in arr){
             temp_array.push(arr[index]);
         }
+        //取出的数值项，保存在此数组
         var return_array = new Array();
         for(var i=0;i<num;i++){
+            //判断如果数组还有可以取出的元素，以防下标越界
             if(temp_array.length>0){
-                var arrIndex=Math.floor(Math.random()*temp_array.length);
+                //在数组中产生一个随机索引(因为下标是从0到length-1)
+                var arrIndex = Math.floor(Math.random()*temp_array.length);
+                //将次随机索引的对应数组元素复制出来
                 return_array[i]=temp_array[arrIndex];
+                //然后删掉此索引的数组元素temp_array[arrIndex]，这时候temp_array少了一个数组元素temp_array[arrIndex]变成新的数组，继续循环选下一个随机数，从而达到不重复的目的
                 temp_array.splice(arrIndex,1);
             }else{
+                //数组中数据取完后，退出循环，比如数组本来只有10项，但要取出20项
                 break;
             }
-            return return_array;
         }
+        return return_array;
     }
-//    function getArrayItems(arr,num){
-//        var temp_array = new Array();
-//        for(var index in arr){
-//            temp_array.push(arr[index]);
-//        }
-//        var return_array = new Array();
-//        for(var i=0;i<num;i++){
-//            if(temp_array.length>0){
-//                var arrIndex = Math.floor(Math.random()*temp_array.length);
-//                return_array[i]=temp_array[arrIndex];
-//                temp_array.splice(arrIndex,1);
-//            }else{
-//                break;
-//            }
-//        }
-//        return return_array;
-//    }
-    var demo_array=codeStr.split("");
-    console.log(demo_array);
-    my_array=getArrayItems(demo_array,4);
-    console.log(my_array);
-//    function getCode_notRepeat(){
-//        var demo_array=codeStr.split("");
-//        my_array=getArrayItems(demo_array,4);
-//        console.log(demo_array);
-//
-//        var str="";
-//        for(var i=0;i<my_array.length;i++){
-//            str+=my_array[i];
-//        }
-//        oDiv.innerHTML = str;
-//    }
-//    getCode_notRepeat();
-//    oDiv.onclick=function(){
-//        getCode_notRepeat();
-//    }
+
+
+
+    function getCode_notRepeat(){
+        var demo_array=codeStr.split("");
+        console.log(demo_array);
+        var my_array=getArrayItems(demo_array,4);
+        console.log(my_array);
+        var str="";
+        for(var i=0;i<my_array.length;i++){
+            str+=my_array[i];
+        }
+        oDiv.innerHTML = str;
+    }
+    getCode_notRepeat();
+    oDiv.onclick=function(){
+        getCode_notRepeat();
+    }
 
 </script>
 </body>
