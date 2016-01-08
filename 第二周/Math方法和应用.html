@@ -80,7 +80,7 @@
                 var arrIndex = Math.floor(Math.random()*temp_array.length);
                 //将次随机索引的对应数组元素复制出来
                 return_array[i]=temp_array[arrIndex];
-                //然后删掉此索引的数组元素，这时候temp_array变成新的数组
+                //然后删掉此索引的数组元素temp_array[arrIndex]，这时候temp_array少了一个数组元素temp_array[arrIndex]变成新的数组，继续循环选下一个随机数，从而达到不重复的目的
                 temp_array.splice(arrIndex,1);
             }else{
                 //数组中数据取完后，退出循环，比如数组本来只有10项，但要取出20项
@@ -90,20 +90,21 @@
         return return_array;
     }
     //
-    var my_array = new Array();
+//    var my_array = new Array();
     //max,min指定范围
-    for(var i=min;i<max;i++){
-        my_array[i]=i;
+//    for(var i=min;i<max;i++) {
+//        my_array[i] = i;
+//    }
     //获取4个0-61之间的不重复随机整数
     var arr_notRepeat=[];
-    for(i=0;i<61;i++){
+    for(var i=0;i<61;i++){
         arr_notRepeat[i]=i;
     }
-    my_array = getArrayItems(my_array,4);
+//    my_array = getArrayItems(my_array,4);
 
     
 
-
+    console.log(arr_notRepeat);
     my_array=getArrayItems(arr_notRepeat,4);
     console.log(my_array);
 </script>

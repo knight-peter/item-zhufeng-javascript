@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串方法及应用</title>
+    <style>
+        body,div{
+            margin:0;
+            padding:0;
+            font-size: 18px;
+            -webkit-user-select: none;
+        }
+        html,body{
+            height:100%;
+        }
+        body{
+            position: relative;
+        }
+        .code{
+            position: absolute;
+            /*长宽未知，实现垂直居中*/
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            width:100px;
+            height: 50px;
+            line-height: 50px;
+            text-align:center;
+            border:1px solid #ff0000;
+            cursor:pointer;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body>
+<div class="code" id="code">XDF2</div>
+<script type="text/javascript">
+    //设置随机获取的范围
+    var codeStr="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+    var oDiv=document.getElementById("code");
+//    console.log(oDiv);
+    function getRandom(n,m){
+        n=Number(n);
+        m=Number(m);
+        if(isNaN(n)||isNaN(m)){
+            return Math.random();
+        }
+        if(n>m){
+            var temp=n;
+            n=m;
+            m=temp;
+        }
+        return Math.round(Math.random()*(m-n)+n);
+    }
+    //    0-61索引 我只需要的随机生成4个索引，然后通过charAt就可以获取到字符了
+//    function getCode(){
+//        var str="";//要把str放在for循环外面才能进行拼接
+//        for(var i=0;i<4;i++){
+//            var ran=getRandom(0,61);
+//            str += codeStr.charAt(ran);
+//        }
+//        console.log(str);
+//        oDiv.innerHTML = str;
+//    }
+//    getCode();
+//    oDiv.onclick=function(){
+//        getCode();
+//    }
+
+//    思考：获取四位不重复验证码
+    function getArrayItems(arr,num){
+        var temp_array = new Array();
+        for(var index in arr){
+            temp_array.push(arr[index]);
+        }
+        var return_array = new Array();
+        for(var i=0;i<num;i++){
+            if(temp_array.length>0){
+                var arrIndex=Math.floor(Math.random()*temp_array.length);
+                return_array[i]=temp_array[arrIndex];
+                temp_array.splice(arrIndex,1);
+            }else{
+                break;
+            }
+            return return_array;
+        }
+    }
+//    function getArrayItems(arr,num){
+//        var temp_array = new Array();
+//        for(var index in arr){
+//            temp_array.push(arr[index]);
+//        }
+//        var return_array = new Array();
+//        for(var i=0;i<num;i++){
+//            if(temp_array.length>0){
+//                var arrIndex = Math.floor(Math.random()*temp_array.length);
+//                return_array[i]=temp_array[arrIndex];
+//                temp_array.splice(arrIndex,1);
+//            }else{
+//                break;
+//            }
+//        }
+//        return return_array;
+//    }
+    var demo_array=codeStr.split("");
+    console.log(demo_array);
+    my_array=getArrayItems(demo_array,4);
+    console.log(my_array);
+//    function getCode_notRepeat(){
+//        var demo_array=codeStr.split("");
+//        my_array=getArrayItems(demo_array,4);
+//        console.log(demo_array);
+//
+//        var str="";
+//        for(var i=0;i<my_array.length;i++){
+//            str+=my_array[i];
+//        }
+//        oDiv.innerHTML = str;
+//    }
+//    getCode_notRepeat();
+//    oDiv.onclick=function(){
+//        getCode_notRepeat();
+//    }
+
+</script>
+</body>
+</html>
