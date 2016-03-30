@@ -68,21 +68,20 @@
 //        getCode();
 //    }
 
-
 //    思考：获取四位不重复验证码
     function getArrayItems(arr,num){
         //新建一个数组，将传入的数组复制过来，用于运算，而不要直接操作传入的数组；
-        var temp_array=new Array();
-        for(var a=0;a<arr.length;a++){
-            temp_array.push(arr[a]);
+        var temp_array = new Array();
+        for(var index in arr){
+            temp_array.push(arr[index]);
         }
         //取出的数值项，保存在此数组
-        var return_array=new Array();
+        var return_array = new Array();
         for(var i=0;i<num;i++){
             //判断如果数组还有可以取出的元素，以防下标越界
             if(temp_array.length>0){
                 //在数组中产生一个随机索引(因为下标是从0到length-1)
-                var arrIndex=Math.floor(Math.random()*temp_array.length);
+                var arrIndex = Math.floor(Math.random()*temp_array.length);
                 //将次随机索引的对应数组元素复制出来
                 return_array[i]=temp_array[arrIndex];
                 //然后删掉此索引的数组元素temp_array[arrIndex]，这时候temp_array少了一个数组元素temp_array[arrIndex]变成新的数组，继续循环选下一个随机数，从而达到不重复的目的
@@ -98,18 +97,14 @@
 
 
     function getCode_notRepeat(){
-//        把字符串变成数组
         var demo_array=codeStr.split("");
         console.log(demo_array);
-//        执行函数，得出四个不重复字符的数组
         var my_array=getArrayItems(demo_array,4);
         console.log(my_array);
-//        把字符拼接成字符串
         var str="";
         for(var i=0;i<my_array.length;i++){
             str+=my_array[i];
         }
-//        替换html中的字符
         oDiv.innerHTML = str;
     }
     getCode_notRepeat();
