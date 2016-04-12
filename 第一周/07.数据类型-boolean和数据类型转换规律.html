@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据类型-boolean和数据类型转换规律</title>
+</head>
+<body>
+
+<script type="text/javascript">
+   //boolean:true false
+    //!:一个叹号是取反，首先将值转换为布尔类型的，然后再取反
+    console.log(!3);//先把3转换为boolean，然后在取反
+    //!!:将其他数据类型转换成boolean类型，相当于Boolean()
+   console.log(Boolean("zhufeng"));//返回zhufeng
+   console.log(!!"zhufeng");//返回zhufeng
+
+    //数据类型转换的规则：
+    //1、如果只有一个值，判断这个值是真还是假，遵循：只有 0 NaN "" null undefined 这五个是假的，其余的都是真
+    console.log(![]);//返回false
+    //2、val1==val2 两个值可能不是同一个数据类型的，如果是==比较的话，会默认进行数据类型转换
+   /*
+   1)对象==对象 永远不相等
+   2)对象==字符串 先将对象转换为字符串，然后再进行比较
+   3)对象==布尔类型 对象先转换为字符串（toString），然后转换为数字（Number），布尔类型也转换为数字（true是1 false是0），最后让两个数据比较
+   4）对象==数字，对象先转换为字符串（toString）,然后把字符串在转化为数字（Number）
+   5）数字==布尔， true转换为1，flase转换为0
+   7）字符串==布尔 都转换为数字
+   8）null==undefined 结果是true
+   9）null==undefined 和其他任何的数据类型比较都不相等
+
+    */
+//    []==[]
+//  []=="",空数组转化为字符串是一个空字符串
+//    [].toString();
+//    ({}.toString)//{}转换成字符串是"[object object]"
+
+
+</script>
+</body>
+</html>
