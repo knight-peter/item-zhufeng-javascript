@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据类型区分和数据类型检测</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    //基本数据类型和引用数据类型的区别
+    var num1=12;
+    var num2=num1;//把num1变量代表的值给了num2变量
+    num2++;//相当于num2=num2+1 在自己原有值的基础上加1，也可以写成num2+=1
+    console.log(num2);
+
+    var obj1={name:"zhufeng"};
+    var obj2=obj1;
+    obj2.name="zhufengpeixun";
+    console.log(obj1.name);
+    console.log(obj2.name);
+
+    //发现：基本数据类型没有跟着改变，引用数据类型耕者改变了。
+
+
+
+
+</script>
+</body>
+</html>
