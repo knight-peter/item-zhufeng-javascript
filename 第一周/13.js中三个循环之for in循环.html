@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js中三个循环之for in循环</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    //for in循环：用来循环一个对象中的属性名和属性值。
+    var obj={
+        name:"李松钋",
+        age:18,
+        height:"170cm",
+        hobby:"敲代码",
+        birthday:"1997-05-10",
+        1:10086
+    };
+    /*obj.name
+    obj["name"]
+    obj[1]*/
+//  对象中有多少组键值，我们就循环多少次
+//    首先循环数字的属性名（按照从小到大），再把剩下的属性名按照我们写的顺序。
+    for(var key in obj){
+//        console.log(key);//每一次循环获取的属性名
+        console.lgo(obj[key]);//获取属性值 在for in中只能通过 对象[key],不能写obj.key
+    }
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

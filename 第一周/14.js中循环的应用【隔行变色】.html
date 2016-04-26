@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js中循环的应用[隔行变色]</title>
+    <style>
+        body,div,ul,li{
+            margin:0;
+            padding:0;
+            font-family:Arial;
+            font-size:12px;
+        }
+        ul,li{
+            list-style:none;
+        }
+        #list{
+            margin:10px auto 0;
+            padding:10px;
+            width:500px;
+            border:1px solid #ddd;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            /*background:-webkit-linear-gradient(top left, #31b0d5,#67b168,#ac2925);*/
+        }
+        #list li {
+            height: 30px;
+            line-height: 30px;
+            cursor: pointer;
+        }
+        #list li:hover{
+            background-color: #555555;
+        }
+        .c1{
+            background-color:#ddd;
+        }
+        .c2{
+            background-color: #a6e1ec;
+        }
+
+        .c3{
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+
+<div id="list">
+    <ul>
+        <li>01文字内容</li>
+        <li>02文字内容</li>
+        <li>03文字内容</li>
+        <li>04文字内容</li>
+        <li>05文字内容</li>
+        <li>06文字内容</li>
+    </ul>
+</div>
+
+
+<script type="text/javascript">
+    //原理：操作所有的li，让按照奇偶行的规律，改变他的class样式的属性值，奇数行是c1，偶数行是c2
+
+    //通过元素的标签名获取一组元素
+//    document.getElementsByTagName("元素的标签名");
+
+    //在整个文档中（获取的范围，上下文），我们通过元素的标签名（div、li、p...）来获取一组元素
+
+    //获取整个文档中的所有li，它是一个集合。我们把这个集合叫做类数组（类似于数组），并且类数组是对象数据类型的。
+    var oList=document.getElementById("list");
+    var oLis=oList.getElementsByTagName("li");
+    for(var i=0;i<oLis.length;i++){
+        //i=0 第一次循环 获取第一个li oLis[0]
+        //i=1 第二次循环 获取第二个li oLis[1]
+        var oLi=oLis[i];//i的值是偶数代表奇数行，i的值是奇数代表偶数行
+        //i%2 i除以2取余数
+        /*i%2===0?oLi.className="c1":className="c2";*/
+//        oLi.className="c1";//设置每一个li的class样式属性的值
+        switch (i%3){
+            case 0:
+                oLi.className="c1";
+                break;
+            case 1:
+                oLi.className="c2";
+                break;
+            default :
+                oLi.className="c3";
+        }
+        oLi.onmouseover=function(){
+
+        }
+        
+    }
+
+
+    console.log(typeof oLis);//输出object
+    //索引：就是代表当前是第几个元素的位置下标，索引是从0开始的，索引为0代表第一个li，索引为1代表第二个li......索引为n代表第n+1个li
+    //length:代表获取的集合的长度，或者是当前获取了多少个li
+    console.log(oLis.length);
+    console.log(oLis["length"]);
+    console.log(oLis[0]);//获取某一个指定的元素oLis[索引]
+    //通过DOM方法获取的类数组还可以用.item(索引)来获取某一个
+    console.log(oLis.item(1));
+
+
+
+
+
+</script>
+</body>
+</html>
