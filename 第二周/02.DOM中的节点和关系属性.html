@@ -26,24 +26,30 @@
 //        previousSibling:获取哥哥节点
 //        nextSibling:获取弟弟节点
 
-//        var oDiv=document.getElementById("div1");
-//        console.log(oDiv.childNodes);
-//        console.log(oDiv.children);
-//        console.log(oDiv.firstChild);
-//        console.log(oDiv.lastChild);
-//        console.log(oDiv.parentNode);
-//        console.log(oDiv.previousSibling);
-//        console.log(oDiv.nextSibling);
-        /**
-         * js中我们需要掌握的节点类型：
-     *              nodeType    nodeName    nodeValue
-         * 元素节点   1         大写的标签名      null
-         * 文本节点     3           #text       文字内容
-         * 注释节点     8           #comment   注释内容
-         * document   9           #document   null
-         */
+        var oDiv=document.getElementById("div1");
+        console.log(oDiv.childNodes);
+        console.log(oDiv.children);
+        console.log(oDiv.firstChild);
+        console.log(oDiv.lastChild);
+        console.log(oDiv.parentNode);
+        console.log(oDiv.previousSibling);
+        console.log(oDiv.nextSibling);
+    /**
+     * js中我们需要掌握的节点类型：
+ *              nodeType    nodeName    nodeValue
+     * 元素节点     1         大写的标签名    null
+     * 文本节点     3         #text        文字内容
+     * 注释节点     8         #comment     注释内容
+     * document    9        #document     null
+     */
+    console.log(oDiv.nodeType);//1
+    console.log(oDiv.nodeName);//"DIV"
+    console.log(oDiv.nodeValue);//null
+
 //    在标准浏览器下，我们把空格和Enter（回车换行）都当作文本节点
 //    方法：模拟我们的children方法，实现获取指定元素下的元素子节点
+
+
     /**
      * getMyChildren:获取指定元素下的所有元素节点
      * @param:(参数)

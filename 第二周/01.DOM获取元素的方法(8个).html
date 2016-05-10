@@ -35,6 +35,13 @@
 //    var oDiv=document.getElementById("tab");
 //    console.log(oDiv.tagName);
 //    tab.style.border="1px solid red";
+
+
+
+
+
+
+
     /**
      * 2)通过元素标签名，来获取一组元素（有几个获取几个）
      * document.getElementsByTagName("元素标签名");
@@ -45,6 +52,12 @@
 //    var oLis=oDiv.getElementsByTagName("li");
 //    console.dir(oLis);
 //    oLis[0]等同于oLis.item(0)
+
+
+
+
+
+
     /**
      * 3)context.getElementsByName() 通过name属性的值获取一组元素
      * 在ie浏览器下只对表单元素起作用
@@ -62,6 +75,12 @@
 //        }
 //        console.log(cur);
 //    }
+
+
+
+
+
+
     /**
      * 4)context.getElementsByClassName() 通过元素的类名来获取一组元素
      * 是项目中最常用的一种方法，但是，这个方法不兼容 在ie6-8中会报错
@@ -69,21 +88,34 @@
 //    var oDiv=document.getElementById("tab");
 //    var oList=oDiv.getElementsByClassName("c-li");
 //    console.dir(oList);
+
+
+
+
+
+
     /**
      * 5)document.documentElement 获取html元素
      * document.body//获取body元素
      */
     var curWidth=document.documentElement.clientWidth||document.body.clientWidth;//兼容所有浏览器的获取当前屏幕的宽度
     var curHeight=document.documentElement.clientHeight||document.body.clientHeight;//兼容所有浏览器的获取当前屏幕的高度
+
+
+
+
+
     /**
      * 6)在移动端我们获取元素常用的方法（ie6~8下不兼容）
      * document.querySelector() 获取一个
      * document.querySelector() 获取多个 类数组集合
-     * querySelector jquery 参考css选择器
+     * querySelector、jquery的选择器参考css选择器的规则
      */
 //    var oDiv=document.querySelector("#tab");
 //    "#id" ".class" "li"
 //    var oLis=document.querySelectorAll("#tab li");
+
+//    jQ
 
 </script>
 </body>
