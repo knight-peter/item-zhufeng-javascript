@@ -34,21 +34,21 @@
     dd.style.width="200px";
     dd.style.height="100px";
     dd.style.border="5px solid blue";
-    oP.parentNode.replaceChild(dd,oP);//替换
+    oP.parentNode.replaceChild(dd,oP);//替换，dd为新元素，oP为旧元素
 
 
 //    增加自定义属性
 //    1.把clo看做一个对象数据类型，我们在他的开辟的空间中增加一个属性名"zhuFeng"
-//    var obj={}; obj.name="123";
-//    clo.zhuFeng="珠峰培训";
-//    clo["zhuFeng"]="珠峰培训";
-//    console.log(clo.zhuFeng);
+    var obj={}; obj.name="123";
+    clo.zhuFeng="珠峰培训";
+    clo["zhuFeng"]="珠峰培训";
+    console.log(clo.zhuFeng);
 
-//    setAttribute:设置元素的属性（包含自定义属性）
+//    2.setAttribute:设置元素的属性（包含自定义属性）
 //    修改html元素的结果（使用这个方法在html上可以体现出来）
-//    clo.setAttribute("zhuFeng","珠峰培训");
-//    console.log(clo.getAttribute("zhuFeng"));
-//    clo.removeAttribute("zhuFeng");
+    clo.setAttribute("zhuFeng","珠峰培训2");
+    console.log(clo.getAttribute("zhuFeng"));
+//    clo.removeAttribute("zhuFeng");//删除属性值removeAttribute
 //    在ie6~8下这个方法不能修改class属性 clo.setAttribute("class","ccc")是不起作用的
     clo.className="ccc";//这样可以
 

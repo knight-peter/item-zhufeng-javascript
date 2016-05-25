@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08.Date和应用</title>
+    <style>
+        body,div{
+            margin:0;
+            padding:0;
+            font-size:28px;
+        }
+        #div1{
+            margin:20px auto;
+            width:700px;
+            height:50px;
+            line-height: 50px;
+            text-align:center;
+            border:1px solid #008cd7;
+            background:-webkit-linear-gradient(top left,#08bece,#9acd32,#ffe0e9);
+        }
+    </style>
+</head>
+<body>
+<div id="div1">北京时间：</div>
+<script type="text/javascript">
+    //获取当前自己电脑的时间:不能做重要的用途，例如：淘宝秒杀
+    var time = new Date();
+    console.log(time);//Wed May 25 2016 17:00:42 GMT+0800 (中国标准时间) 这是时间格式数据（对象数据类型的）
+
+    var oDiv=document.getElementById("div1");
+    var timeStr=formatTime();
+    oDiv.innerHTML+=timeStr;
+
+    //2016年05月24日 星期三 变成我们这个时间格式字符串
+    function formatTime(){
+        var time=new Date();
+        var year=time.getFullYear();
+        var month=time.getMonth()+1;//0-11代表我们的1-12月
+        var day=time.getDate();
+        var w=time.getDay();//0-6代表周日-周六
+        var wStr="日一二三四五六",week=wStr.charAt(w);
+        var hours=time.getHours();
+        var seconds=time.getSeconds();
+        var mlSeconds=time.getMilliseconds();//毫秒
+        return year+"年"+zero(month)+"月"+zero(day)+"日 星期"+week+" "+zero(hours)+"时"+zero(seconds)+"分"+zero(seconds)+"秒";
+    }
+    function zero(value){
+        return value<10 ? "0"+value:value;
+    }
+</script>
+</body>
+</html>

@@ -8,7 +8,7 @@
             margin:0;
             padding:0;
             font-size: 18px;
-            -webkit-user-select: none;
+            -webkit-user-select: none;/*清除鼠标双击选中文本效果*/
         }
         html,body{
             height:100%;
@@ -53,7 +53,7 @@
         }
         return Math.round(Math.random()*(m-n)+n);
     }
-    //    0-61索引 我只需要的随机生成4个索引，然后通过charAt就可以获取到字符了
+    //    0-61索引 我只需要的随机生成4个索引（可能是重复的），然后通过charAt就可以获取到字符了
 //    function getCode(){
 //        var str="";//要把str放在for循环外面才能进行拼接
 //        for(var i=0;i<4;i++){

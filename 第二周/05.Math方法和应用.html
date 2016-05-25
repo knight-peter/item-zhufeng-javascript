@@ -71,12 +71,12 @@
         for(var index in arr){
             temp_array.push(arr[index]);
         }
-        //取出的数值项，保存在此数组
+        //取出的数值项，保存在此数组，这个数组是返回值
         var return_array = new Array();
         for(var i=0;i<num;i++){
             //判断如果数组还有可以取出的元素，以防下标越界
             if(temp_array.length>0){
-                //在数组中产生一个随机索引(因为下标是从0到length-1)
+                //在数组中产生一个随机索引(因为下标是从0到length-1,所以使用Math.floor()向下取整)
                 var arrIndex = Math.floor(Math.random()*temp_array.length);
                 //将次随机索引的对应数组元素复制出来
                 return_array[i]=temp_array[arrIndex];

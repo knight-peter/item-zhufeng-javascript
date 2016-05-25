@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08.Date和应用</title>
+    <style>
+        body,div{
+            margin:0;
+            padding:0;
+            font-size:28px;
+        }
+        #div1{
+            margin:20px auto;
+            width:700px;
+            height:50px;
+            line-height: 50px;
+            text-align:center;
+            border:1px solid #008cd7;
+            background:-webkit-linear-gradient(top left,#08bece,#9acd32,#ffe0e9);
+        }
+    </style>
+</head>
+<body>
+<div id="div1">距离下课：</div>
+<script type="text/javascript">
+    //把时间格式的字符串变成我们的标准格式
+//    var tar=new Date("2015-05-24 17:59:59");
+//    对字符串的格式有要求
+//    中间有用"-"在IE6~8下不兼容，需要改成"/"
+
+    //getTime:获取距离1970年1月1日午夜（00:00）之间的毫秒差
+
+    var oDiv=document.getElementById("div1");
+    var str=getSpanTime();
+    oDiv.innerHTML+=str;
+
+    function getSpanTime(){
+        var tarTime=new Date("2016-05-25 20:59:59");
+        var nowTime=new Date();
+        var tarSpan=tarTime.getTime();
+        var nowSpan=nowTime.getTime();
+        var diffTime=tarSpan-nowSpan;//当前时间距离目标时间的毫秒差
+        //接下来我们用毫秒差算出包含多nowSpan少小时、分钟、秒就好了
+        //1.算出总毫秒差中包含的小时有几个
+        var hour=Math.floor(diffTime/(1000*60*60));
+        //2.算出当前这几个小时占了多少毫秒
+        var hourMs=hour*60*60*1000;
+        //3.接下来算分钟的时候，需要把小时占用的时间减去
+        var spanMs=diffTime-hourMs;
+        //4.算spanMs中包含多少分钟
+        var minute=Math.floor(spanMs/(1000*60));
+        //5.算这么多分钟占用了多少毫秒
+        var minuteMs=minute*60*1000;
+        //6.算秒的时候把分钟占用的也减去
+        spanMs=spanMs-minuteMs;
+        //7.算剩下的包含多少秒
+        var second=Math.floor(spanMs/1000);
+        return zero(hour)+":"+zero(minute)+":"+zero(second);
+    }
+    function zero(value){
+        return value<10 ? "0"+value:value;
+    }
+
+
+//
+</script>
+</body>
+</html>

@@ -17,6 +17,32 @@
         </ul>
     </div>
     <script type="text/javascript">
+/*
+for改写成while
+*/
+        //第六步i=6;
+        for(var i=0;i<5;i++){
+            if(i<=5){
+                i+=1;
+                continue;
+            }else{
+                break;
+                i+=2;
+            }
+        }
+        console.log(i);
+
+        var i=0;
+        while(i<5){
+            if(i<=5){
+                i+=1;
+                i++;
+                continue;
+            }else{
+                break;
+                i+=2;
+            }
+        }
         //如果我想获li3的上一个哥哥元素节点，我们发现，直接previousSibing获取的不一定是元素的，往上找多少级也不知道
         var oLi3 = document.getElementById("li3");
         var pre=oLi3.previousSibling;
@@ -27,6 +53,10 @@
 //                pre=pre.previousSibling;
 //            }
 //        }
+
+
+
+
 //        第二种办法
 //        while(pre&&pre.nodeType !==1){
 //            pre=pre.previousSibling;
