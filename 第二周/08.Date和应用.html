@@ -29,7 +29,12 @@
 
     var oDiv=document.getElementById("div1");
     var timeStr=formatTime();
-    oDiv.innerHTML+=timeStr;
+    oDiv.innerHTML="北京时间："+timeStr;
+    var timer=setInterval(function(){
+        var timeStr=formatTime();
+        oDiv.innerHTML="北京时间："+timeStr;
+    },1000);
+
 
     //2016年05月24日 星期三 变成我们这个时间格式字符串
     function formatTime(){
@@ -40,9 +45,10 @@
         var w=time.getDay();//0-6代表周日-周六
         var wStr="日一二三四五六",week=wStr.charAt(w);
         var hours=time.getHours();
+        var minutes=time.getMinutes();
         var seconds=time.getSeconds();
         var mlSeconds=time.getMilliseconds();//毫秒
-        return year+"年"+zero(month)+"月"+zero(day)+"日 星期"+week+" "+zero(hours)+"时"+zero(seconds)+"分"+zero(seconds)+"秒";
+        return year+"年"+zero(month)+"月"+zero(day)+"日 星期"+week+" "+zero(hours)+"时"+zero(minutes)+"分"+zero(seconds)+"秒";
     }
     function zero(value){
         return value<10 ? "0"+value:value;
