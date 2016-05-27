@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数深入</title>
+</head>
+<body>
+
+<script type="text/javascript">
+//    console.log(total);
+    var total=0;
+    function sum(){
+        var total=null;
+        for(var i=0;i<arguments.length;i++){/*arguments是函数接收数字机制*/
+            var val=Number(arguments[i]);
+            if(isNaN(val)){
+                continue;
+            }
+            total+=val;
+        }
+        return total;
+        console.log(total);
+    }
+//    sum(1,2,3);
+    console.log(total);
+    total=sum(1,"2",3,"a");
+    console.log(total);
+    total=sum(100,200);
+    console.log(total);
+
+
+    //预解释是发生在当前作用域下的，刚开始只声明或者定义全局下的var或者function
+    //带var和带function关键字的，进行预解释的时候是不一样的
+    //var:只是提前声明
+    //function:提前的声明和定义都完成了
+    //一个function在执行之前（预解释的时候）就把声明和定义完成了，在接下来执行代码的过程中，如果遇到函数定义那块代码直接跳过就可以了。
+    //函数执行可以写在任何位置，可以写在函数定义代码上面，原因是定义的这个操作在预解释就完成了。
+
+    //函数执行会形成一个私有作用域（栈内存）
+    //首先进行的就是预解释
+    //其次代码执行
+    //（在函数中的这个私有作用域中定义的变量都是私有的变量），形成的这个作用域保护里面的私有变量不受外界的干扰，我们把这种机制叫做闭包。
+    //函数执行一次就会行程一个新的私有作用域，上述的步骤重复一次
+    //一般情况下每一次执行完成，函数新形成的作用域都自动销毁。
+
+
+    //预解释是发生在当前作用域下的
+
+
+
+    //匿名函数
+    //函数表达式：
+    var fn=function(){
+
+    }
+    oDiv.onclick()=function(){
+
+    }
+    window.setInterval(function(){
+
+    },1000);
+    //自执行函数：定义和执行放在一起操作了，定义完经接着就执行了
+    (function(name){
+        console.log(name);
+    })("珠峰");
+
+
+</script>
+</body>
+</html>
