@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>引用数据类型深入_练习</title>
+</head>
+<body>
+    <div id="div1" style="width:100px;height:100px;">珠峰培训</div>
+<script type="text/javascript">
+    /*通过DOM方法获取的元素都是对象数据类型的，
+    用typeof检测返回的结果都是"object"，
+    既然是对象数据类型的，就存在相关的属性名和属性值*/
+    var oDiv=document.getElementById("div1");
+    console.log(typeof oDiv);
+    console.log(oDiv);
+    var oStyle=oDiv.style;
+    var c=oDiv.style.backgroundColor;
+    oDiv.style.backgroundColor="red";
+
+
+
+    oDiv.onclick=function(){
+        var bg=oDiv.style.backgroundColor;
+        if(bg=="red"){
+            bg="yellow";
+        }
+    }
+</script>
+</body>
+</html>

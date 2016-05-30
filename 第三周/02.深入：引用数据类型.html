@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>引用数据类型深入</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    var obj={
+        name:"珠峰培训",
+        age:6,
+        teacher:"周啸天"
+    };
+    var num=12;
+
+
+//  js运行过程
+    //1.在刚开始加载页面的时候，浏览器会天生自带一个供我们当前js代码执行的环境，我们把这个环境称之为“栈内存”，我们也叫他为作用域
+    //而且开始加载页面的那个作用域称之为全局作用域(window)
+
+    //2.当开始加载js代码之前，首先会当前全局作用域下带var和function关键字的进行提前的声明或者定义，我们把这种机制叫做“预解释”（变量提升）
+    //在全局作用域下声明的变量叫做全局变量（公用变量）
+    //带var 关键字的是提前的声明 var num;就叫做声明
+
+    //3.声明：declare 就是 var 变量名；只是声明没有赋值的话，默认的值是undefined
+    //定义：defined 给变量名赋值
+
+
+    console.log(num1);
+    var num1=12;
+</script>
+</body>
+</html>
