@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>面试题及补充</title>
+</head>
+<body>
+<script>
+    //一道超级变态坑爹的面试题
+    f = function () {
+        return true;
+    };
+    g = function () {
+        return false;
+    };
+    (function () {
+        if (g() && [] == ![]) {
+            f = function f() {
+                return false;
+            };
+            function g() {
+                return true;
+            }
+        }
+    })();
+    /*[] == ![]
+    []==false
+    Number([].toString()) //空数组转换成字符串是空字符，转换成数字是“0”。
+    //“0”和false相等，是true
+
+    g()返回结果也是true
+    于是函数自执行，f=function f(){return false;}
+    */
+
+    alert(f());//返回false
+    alert(g());//这个弹出什么，和那个闭包没一毛钱的关系 false
+
+    /*
+    函数在括号中，和在等号的右边，它就是一个值，作用域里面就没有这个函数。
+    * */
+
+    /*
+    * 解释g()&&[]==![]这个逻辑表达式：（firefox除外）
+     这个g函数是在这个闭包作用域里定义，同样会解释。也就是说这里运行的这个g函数是下面定义的，和上面那个g没关系。所以当g()时，会返回true
+     后边的[]==![]，先执行![]这个运算，把![]转化为false，那现在就相当于[]==false了，
+     数组和其它类型转化的时候，先隐式调用它的toString方法，把数组转为字符，然后再比较。
+     空数组转为字符串，当然是空字符串了，那就相当于''==false;
+     而空字符串和false做比较，就是true;*/
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>无标题文档</title>
+    <style type="text/css">
+        #ul1 li {
+            height: 20px;
+            width: 100px;
+            overflow: hidden;
+            background: green;
+            margin: 10px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<ul id="ul1">
+    <li>11111111</li>
+    <li>22222222</li>
+    <li>33333333</li>
+    <li>444444444</li>
+    <li>55555555</li>
+</ul>
+</body>
+</html>
+<script>
+    //for循环执行完，里面的setTimeout还没执行。i变量已经变化。所以要把setTimeout的i放到自己的作用域里，所以要定义一个函数
+//    var oLis = document.getElementById("ul1").getElementsByTagName("li");
+//    for (var i = 0; i < oLis.length; i++) {
+//        /*
+//         ;(function(i){
+//         window.setTimeout(function(){oLis.item(i).style.left=(i+1)*100+"px";},(i+1)*1000);
+//         })(i);
+//         */
+////        传函数的i参数是同步的，一个一个参数的传进去，存在多个函数作用域。这些函数执行的时候是异步的。
+//        window.setTimeout((function (i) {
+//            return function () {
+//                oLis.item(i).style.left = (i + 1) * 100 + "px"
+//            }
+//        })(i), (i + 1) * 1000);
+//    }
+
+//  测试下面这个for循环所需时间  解释for循环原理
+/*    var d = new Date;
+    for (var i = 0; i < 100000; i++) {
+
+    }
+    console.log(new Date - d);*/
+
+    function fn(i){alert("fn"+i);};
+    function fn1(){return function(){alert("inner")}}
+    window.setTimeout(fn1,1000);
+    window.setTimeout(fn1(11),1000);//加括号指的是setTimeout运行的是fn1()的返回值（返回值是一个函数）。不加括号指的是运行fn1，返回的是"function(){alert("inner")}",这只是个被定义的函数，没有被运行。
+//    window.setTimeout(fn(),1000)
+//    如果直接写fn(9)带参数，那fn(9)会直接执行alert(14)更早执行。必须包装到函数里面。
+//    window.setTimeout(function(){fn(9)},1000)
+    //异步：不是一队列，同一个队列执行完，再执行另外一个队列。
+    window.setTimeout(function(){fn(9)},1000)//还是alert(14)更快执行。
+    alert("14");
+
+
+    /*
+    * 保持个性--保护自己
+     同时还能和它人友好沟通--留好接口（通道）--参数
+     作用域在定义的时候就确定了
+     * */
+</script>
