@@ -23,16 +23,23 @@
             }
         }
     })();
-    /*[] == ![]
-    []==false
-    Number([].toString()) //空数组转换成字符串是空字符，转换成数字是“0”。
+    /*
+    +,-,~,! 单幕运算符优先级别最高
+    1.[] == ![] //[]是一个存在对象，为true，!为取非，于是![]为false
+    2.[]==false //Number([].toString()) //空数组转换成字符串是空字符，转换成数字是“0”。
     //“0”和false相等，是true
+    3.[]==![]返回true
 
     g()返回结果也是true
     于是函数自执行，f=function f(){return false;}
     */
 
     alert(f());//返回false
+    /*f = function f() {
+     return false;
+     };
+     被运行，于是f的引用地址被改变，于是执行被改变后的函数
+     */
     alert(g());//这个弹出什么，和那个闭包没一毛钱的关系 false
 
     /*

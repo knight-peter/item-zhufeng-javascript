@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this是什么</title>
+</head>
+<body>
+<!--
+this是什么
+this是content，中文翻译成上下文，我平生最恨的词汇之一
+是指一个行为发生的主体
+也就是说，这个行为是谁发生的（谁执行的）就是谁
+比如说吃饭这个行为，谁在吃饭，那吃饭方法里的this就是谁
+
+分清：作用域和上下文
+你去饭馆里吃饭，你占用了饭馆的空间，那些碗筷桌椅都是这个空间里的变量，你吃完饭要把这个空间释放掉。
+这个饭馆的空间就是作用预。
+而吃饭的人是你，你就是吃饭这个方法里的那个this，叫上下文。
+在那儿干的这件事，和谁干的这件事，分别是作用域和上下文
+
+-->
+<script>
+    function fn(){
+    //    alert(this);
+    }
+    fn();
+    document.documentElement.onclick=fn;
+    var obj={fn:fn}
+    obj.fn();
+//    this关键字是谁，和在哪定义的没有关系，只和在那儿执行有关系。定义的时候，不知道this是谁，只要运行的时候才知道this是指谁呢
+//    变量属于哪个作用域，由它在哪儿（作用域里）定义有关系。
+
+</script>
+</body>
+</html>
