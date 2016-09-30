@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>02.1.作用域</title>
+    <style type="text/css">
+        #ul1 li {
+            height: 20px;
+            width: 100px;
+            overflow: hidden;
+            background: green;
+            margin: 10px;
+            position: relative;
+        }
+    </style>
 </head>
 <body>
-
+<ul id="ul1">
+    <li>11111111</li>
+    <li>22222222</li>
+    <li>33333333</li>
+    <li>444444444</li>
+    <li>55555555</li>
+</ul>
 <script>
     /*数据也是要有隐私的---我的地盘我做主
      JS中没有代码块----使用函数运行的机制创建
@@ -55,7 +71,10 @@
      <li>列表四</li>
      <li>列表五</li>
      </ul>
-     很多人给出了如下错误的代码（点击li时弹出的是5）：*/
+     */
+
+
+    //很多人给出了如下错误的代码（点击li时弹出的是5）：
     var oLis = document.getElementsByTagName('li');
     for (var i = 0; i < oLis.length; i++) {
         oLis [i].onclick = function () {//注意：这里的这个匿名方法，在循环运行的时候这个匿名方法本身并不运行，当点击某个li的时候，这个方法才运行呢。
@@ -65,17 +84,17 @@
         };
     }
     //正确的代码一：
-    var oLis = document.getElementsByTagName('li');
+    /*var oLis = document.getElementsByTagName('li');
     for (var i = 0; i < oLis.length; i++) {
         ;(function (i) {//这里的这个i，已经不是外面的那个i变量了。 形参
             oLis [i].onclick = function () {
                 alert(i);
             };
         })(i);//实参
-    }
+    }*/
 
     //正确代码二：
-    function fn(i) {
+    /*function fn(i) {
         oLis [i].onclick = function () {
             alert(i);
         };
@@ -83,9 +102,9 @@
     var oLis = document.getElementsByTagName('li');
     for (var i = 0; i < oLis.length; i++) {
         fn(i);
-    }
+    }*/
     //正确代码三（闭包：函数里面套函数）
-    var oLis = document.getElementsByTagName('li');
+    /*var oLis = document.getElementsByTagName('li');
     for (var i = 0; i < oLis.length; i++) {
         ;(function (i) {//这里的这个i，已经不是外面的那个i变量了。
             oLis [i].onclick = function (n) {
@@ -94,7 +113,7 @@
                 }
             };
         })(i);
-    }
+    }*/
 
     /*以上代码中，无论是定义有名的函数还是匿名的函数，其实运行的机制都是一样的，在这里都是为了让里面的变量i不受外面变量i的影响。无论是有名的函数还是匿名的函数，在运行的时候里面的i都会变为一个具体的数值。
      把上面的代码分解一下：
